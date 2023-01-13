@@ -27,7 +27,7 @@ public class Category implements Serializable{
 	
 	private String name;
 	
-	@JsonIgnore
+	@JsonIgnore //Essa Anotação Serve para Evitar o Looping Infinito Durante as Consultas no Json.
 	@ManyToMany(mappedBy = "categories")
 	private Set<Product> products = new HashSet<>();
 	
